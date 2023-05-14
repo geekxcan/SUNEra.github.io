@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SherlockX
+title: 火山`s Blog
 subtitle: ''
 description: ''
 keywords:
-author: SherlockX
-language: en
+author: 火山
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -97,9 +97,13 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: <git@github.com:SUNEra/SUNEra.github.io.git> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: [ main ]
+  message: [ modify ]
+
