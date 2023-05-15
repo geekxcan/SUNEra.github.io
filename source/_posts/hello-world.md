@@ -18,6 +18,41 @@ GitHub作为最大的同性交友网站（笑），因为它的开源性，所�
 
 Next主题是一款基于hexo的主题，它的作者是一位中国人，所以中文文档很全，而且还有很多第三方插件，可以满足大部分需求，而且还有很多可配置参数，可以自定义，比如我就把它的默认主题色改成了蓝色，因为我喜欢蓝色。
 
+### 常用命令
 
+```bash
+hexo new "My New Post" # 新建文章
+hexo new page "about" # 新建页面
+hexo clean # 清除缓存文件 (db.json) 和已生成的静态文件 (public)
+hexo generate # 生成静态文件
+hexo server # 启动服务预览
+hexo deploy # 部署到GitHub
+```
+
+### Next常用配置
+[Next配置参考](https://theme-next.js.org/docs/getting-started/)
+    
+    scheme 主题
+    menu: 菜单
+    ...
+    custom_file_path 深度定制
+    inject: 注入
+    ...
+简单的注入比如，在根目录下建个scripts文件夹，hexo会自动加载此文件夹的文件，然后添加个js文件，写入
+``` JavaScript
+hexo.extend.filter.register('theme_inject', function(injects) {
+injects.sidebar.raw('随便一个名字', '你的raw html代码', {}, {cache: true});
+});
+```
+其中 injects.sidebar.raw 中的 sidebar 可选范围是
+```javascript
+module.exports = {
+views: ['head', 'header', 'sidebar', 'postMeta', 'postBodyStart', 'postBodyEnd', 'footer', 'bodyEnd', 'comment'],
+styles: ['variable', 'mixin', 'style']
+};
+```
+
+[inject参考](https://theme-next.js.org/docs/advanced-settings/injects.html)
+    
 
 

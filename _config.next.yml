@@ -27,7 +27,7 @@ custom_file_path:
   #postBodyEnd: source/_data/post-body-end.njk
   #footer: source/_data/footer.njk
   #bodyEnd: source/_data/body-end.njk
-  #variable: source/_data/variables.styl
+  variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
   #style: source/_data/styles.styl
 
@@ -758,14 +758,14 @@ addtoany:
 # Google Analytics
 # See: https://analytics.google.com
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: G-B13CXQM0MW # <app_id>
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
-  only_pageview: false
+  only_pageview: true
 
 # Baidu Analytics
 # See: https://tongji.baidu.com
-baidu_analytics: 84769342510fc6f6b4800502366f0150 # <app_id>
+baidu_analytics: e74c9f2d4f055c2ae3ff7fe2cd5d6680 # <app_id>
 
 # Growingio Analytics
 # See: https://www.growingio.com
