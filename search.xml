@@ -14,21 +14,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/05/14/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>My First Blog</title>
+    <url>/2023/05/15/hello-world/</url>
+    <content><![CDATA[<h2 id="为什么要写blog"><a href="#为什么要写blog" class="headerlink" title="为什么要写blog"></a>为什么要写blog</h2><p>做开发十几年了，从来没想过写blog，因为觉得没有什么高深的东西值得分享，都是自己记录笔记，但是想想也不是要做分享，在网上留点足迹，记录下自己的学习和生活，锻炼下写作和表达能力也是不错的嘛，顺便还能帮到人就更好了。</p>
+<h2 id="为什么要用hexo"><a href="#为什么要用hexo" class="headerlink" title="为什么要用hexo"></a>为什么要用hexo</h2><p>这一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub，在加上搭配Next主题，大量可配置参数，不用自己手写前端页面，还能自动适配移动端，简直完美。特别适合我这种懒人。</p>
+<h2 id="为什么要用GitHub"><a href="#为什么要用GitHub" class="headerlink" title="为什么要用GitHub"></a>为什么要用GitHub</h2><p>GitHub作为最大的同性交友网站（笑），因为它的开源性，所以可以免费托管静态网页，而且还可以绑定自己的域名，再加上workflow，突出一个方便。</p>
+<h2 id="为什么要用Next主题"><a href="#为什么要用Next主题" class="headerlink" title="为什么要用Next主题"></a>为什么要用Next主题</h2><p>Next主题是一款基于hexo的主题，它的作者是一位中国人，所以中文文档很全，而且还有很多第三方插件，可以满足大部分需求，而且还有很多可配置参数，可以自定义，比如我就把它的默认主题色改成了蓝色，因为我喜欢蓝色。</p>
 ]]></content>
   </entry>
 </search>
