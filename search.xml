@@ -20,6 +20,22 @@
 <h2 id="为什么要用hexo"><a href="#为什么要用hexo" class="headerlink" title="为什么要用hexo"></a>为什么要用hexo</h2><p>这一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub，在加上搭配Next主题，大量可配置参数，不用自己手写前端页面，还能自动适配移动端，简直完美。特别适合我这种懒人。</p>
 <h2 id="为什么要用GitHub"><a href="#为什么要用GitHub" class="headerlink" title="为什么要用GitHub"></a>为什么要用GitHub</h2><p>GitHub作为最大的同性交友网站（笑），因为它的开源性，所以可以免费托管静态网页，而且还可以绑定自己的域名，再加上workflow，突出一个方便。</p>
 <h2 id="为什么要用Next主题"><a href="#为什么要用Next主题" class="headerlink" title="为什么要用Next主题"></a>为什么要用Next主题</h2><p>Next主题是一款基于hexo的主题，它的作者是一位中国人，所以中文文档很全，而且还有很多第三方插件，可以满足大部分需求，而且还有很多可配置参数，可以自定义，比如我就把它的默认主题色改成了蓝色，因为我喜欢蓝色。</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span> <span class="comment"># 新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;about&quot;</span> <span class="comment"># 新建页面</span></span><br><span class="line">hexo clean <span class="comment"># 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span></span><br><span class="line">hexo generate <span class="comment"># 生成静态文件</span></span><br><span class="line">hexo server <span class="comment"># 启动服务预览</span></span><br><span class="line">hexo deploy <span class="comment"># 部署到GitHub</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Next常用配置"><a href="#Next常用配置" class="headerlink" title="Next常用配置"></a>Next常用配置</h3><p><a href="https://theme-next.js.org/docs/getting-started/">Next配置参考</a></p>
+<pre><code>scheme 主题
+menu: 菜单
+...
+custom_file_path 深度定制
+inject: 注入
+...
+</code></pre>
+<p>简单的注入比如，在根目录下建个scripts文件夹，hexo会自动加载此文件夹的文件，然后添加个js文件，写入</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;theme_inject&#x27;</span>, <span class="keyword">function</span>(<span class="params">injects</span>) &#123;</span><br><span class="line">injects.<span class="property">sidebar</span>.<span class="title function_">raw</span>(<span class="string">&#x27;随便一个名字&#x27;</span>, <span class="string">&#x27;你的raw html代码&#x27;</span>, &#123;&#125;, &#123;<span class="attr">cache</span>: <span class="literal">true</span>&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>其中 injects.sidebar.raw 中的 sidebar 可选范围是</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line"><span class="attr">views</span>: [<span class="string">&#x27;head&#x27;</span>, <span class="string">&#x27;header&#x27;</span>, <span class="string">&#x27;sidebar&#x27;</span>, <span class="string">&#x27;postMeta&#x27;</span>, <span class="string">&#x27;postBodyStart&#x27;</span>, <span class="string">&#x27;postBodyEnd&#x27;</span>, <span class="string">&#x27;footer&#x27;</span>, <span class="string">&#x27;bodyEnd&#x27;</span>, <span class="string">&#x27;comment&#x27;</span>],</span><br><span class="line"><span class="attr">styles</span>: [<span class="string">&#x27;variable&#x27;</span>, <span class="string">&#x27;mixin&#x27;</span>, <span class="string">&#x27;style&#x27;</span>]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://theme-next.js.org/docs/advanced-settings/injects.html">inject参考</a></p>
 ]]></content>
   </entry>
 </search>
