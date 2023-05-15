@@ -1,38 +1,23 @@
 ---
-title: Hello World
+title: My First Blog
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+## 为什么要写blog
 
-### Create a new post
+做开发十几年了，从来没想过写blog，因为觉得没有什么高深的东西值得分享，都是自己记录笔记，但是想想也不是要做分享，在网上留点足迹，记录下自己的学习和生活，锻炼下写作和表达能力也是不错的嘛，顺便还能帮到人就更好了。
 
-``` bash
-$ hexo new "My New Post"
-```
+## 为什么要用hexo
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+这一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub，在加上搭配Next主题，大量可配置参数，不用自己手写前端页面，还能自动适配移动端，简直完美。特别适合我这种懒人。
 
-### Run server
+## 为什么要用GitHub
 
-``` bash
-$ hexo server
-```
+GitHub作为最大的同性交友网站（笑），因为它的开源性，所以可以免费托管静态网页，而且还可以绑定自己的域名，再加上workflow，突出一个方便。
 
-More info: [Server](https://hexo.io/docs/server.html)
+## 为什么要用Next主题
 
-### Generate static files
+Next主题是一款基于hexo的主题，它的作者是一位中国人，所以中文文档很全，而且还有很多第三方插件，可以满足大部分需求，而且还有很多可配置参数，可以自定义，比如我就把它的默认主题色改成了蓝色，因为我喜欢蓝色。
 
-``` bash
-$ hexo generate
-```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
 
-### Deploy to remote sites
 
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
