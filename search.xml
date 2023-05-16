@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Go 的输入和字符串处理</title>
+    <url>/2023/05/16/Go-%E7%9A%84%E8%BE%93%E5%85%A5%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h2 id="Go-的输入处理"><a href="#Go-的输入处理" class="headerlink" title="Go 的输入处理"></a>Go 的输入处理</h2><p>用 fmt 包的 Scan 相关函数</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">n, _ := fmt.Scan(&amp;a)</span><br><span class="line"><span class="comment">//Scanf, Scanln 等等</span></span><br></pre></td></tr></table></figure>
+<p>但是这些处理不了带空格的输入，这时可以用 bufio 处理</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">reader := bufio.NewReader(os.Stdin)</span><br><span class="line">s, err := reader.ReadString(<span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h2><p>有时需要填充格式化字符串则</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">fmt.Printf(<span class="string">&quot;%08s&quot;</span>, <span class="string">&quot;test&quot;</span>)</span><br><span class="line"><span class="comment">//如果右填充则加 -</span></span><br><span class="line">fmt.Printf(<span class="string">&quot;%-10s&quot;</span>, <span class="string">&quot;test&quot;</span>)</span><br><span class="line"><span class="comment">//指定填充字符则可以</span></span><br><span class="line">fmt.Sprintf(<span class="string">&quot;%s%s&quot;</span>,raw,strings.Repeat(<span class="string">&quot;_&quot;</span>,<span class="number">9</span>-<span class="built_in">len</span>(raw)))</span><br></pre></td></tr></table></figure>
+<p>对字符串做分割可以</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">numsList := strings.Split(s, <span class="string">&quot; &quot;</span>)</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">numsList := strings.Fields(s)</span><br></pre></td></tr></table></figure>
+<p>转换字符串在 strconv 包中</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">strconv.FormatInt() <span class="comment">//转string</span></span><br><span class="line">strconv.AppendInt(slice,<span class="number">123</span>,<span class="number">2</span>)</span><br><span class="line">strconv.ParseInt() <span class="comment">//转整数</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>go</category>
+      </categories>
+      <tags>
+        <tag>go</tag>
+        <tag>字符串处理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>My New Post</title>
     <url>/2023/05/14/My-New-Post/</url>
     <content><![CDATA[<p>test2</p>
@@ -15,7 +37,7 @@
   </entry>
   <entry>
     <title>Welcome to my blog</title>
-    <url>/2023/05/15/hello-world/</url>
+    <url>/2023/05/16/hello-world/</url>
     <content><![CDATA[<h3 id="为什么要写-blog"><a href="#为什么要写-blog" class="headerlink" title="为什么要写 blog"></a>为什么要写 blog</h3><p>记录学习和生活，培养写作与表达。</p>
 <h3 id="为什么要用-hexo"><a href="#为什么要用-hexo" class="headerlink" title="为什么要用 hexo"></a>为什么要用 hexo</h3><p>这一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub，在加上搭配Next主题，大量可配置参数，不用自己手写前端页面，还能自动适配移动端，简直完美。特别适合我这种懒人。</p>
 <h3 id="为什么要用-GitHub"><a href="#为什么要用-GitHub" class="headerlink" title="为什么要用 GitHub"></a>为什么要用 GitHub</h3><p>GitHub作为最大的同性交友网站（笑），因为它的开源性，所以可以免费托管静态网页，而且还可以绑定自己的域名，再加上workflow，突出一个方便。</p>
