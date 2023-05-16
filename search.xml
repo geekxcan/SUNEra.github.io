@@ -4,13 +4,13 @@
     <title>Go 的输入和字符串处理</title>
     <url>/2023/05/16/Go-%E7%9A%84%E8%BE%93%E5%85%A5%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[<h2 id="Go-的输入处理"><a href="#Go-的输入处理" class="headerlink" title="Go 的输入处理"></a>Go 的输入处理</h2><p>用 fmt 包的 Scan 相关函数</p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">n, _ := fmt.Scan(&amp;a)</span><br><span class="line"><span class="comment">//Scanf, Scanln 等等</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">a := <span class="number">0</span></span><br><span class="line">n, _ := fmt.Scan(&amp;a)</span><br><span class="line"><span class="comment">//Scanf, Scanln 等等</span></span><br></pre></td></tr></table></figure>
 <p>但是这些处理不了带空格的输入，这时可以用 bufio 处理</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line">reader := bufio.NewReader(os.Stdin)</span><br><span class="line">s, err := reader.ReadString(<span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h2><p>有时需要填充格式化字符串则</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line">fmt.Printf(<span class="string">&quot;%08s&quot;</span>, <span class="string">&quot;test&quot;</span>)</span><br><span class="line"><span class="comment">//如果右填充则加 -</span></span><br><span class="line">fmt.Printf(<span class="string">&quot;%-10s&quot;</span>, <span class="string">&quot;test&quot;</span>)</span><br><span class="line"><span class="comment">//指定填充字符则可以</span></span><br><span class="line">fmt.Sprintf(<span class="string">&quot;%s%s&quot;</span>,raw,strings.Repeat(<span class="string">&quot;_&quot;</span>,<span class="number">9</span>-<span class="built_in">len</span>(raw)))</span><br></pre></td></tr></table></figure>
 <p>对字符串做分割可以</p>
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">numsList := strings.Split(s, <span class="string">&quot; &quot;</span>)</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">numsList := strings.Fields(s)</span><br></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">numsList := strings.Split(s, <span class="string">&quot; &quot;</span>)</span><br><span class="line"><span class="comment">//或者直接空格</span></span><br><span class="line">numsList := strings.Fields(s)</span><br></pre></td></tr></table></figure>
 <p>转换字符串在 strconv 包中</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line">strconv.FormatInt() <span class="comment">//转string</span></span><br><span class="line">strconv.AppendInt(slice,<span class="number">123</span>,<span class="number">2</span>)</span><br><span class="line">strconv.ParseInt() <span class="comment">//转整数</span></span><br></pre></td></tr></table></figure>
 ]]></content>
