@@ -8,6 +8,7 @@ categories: [go]
 ## Go 的输入处理
 用 fmt 包的 Scan 相关函数
 ```go
+a := 0
 n, _ := fmt.Scan(&a)
 //Scanf, Scanln 等等
 ```
@@ -28,7 +29,7 @@ fmt.Sprintf("%s%s",raw,strings.Repeat("_",9-len(raw)))
 对字符串做分割可以
 ```go
 numsList := strings.Split(s, " ")
-//或者
+//或者直接空格
 numsList := strings.Fields(s)
 ```
 转换字符串在 strconv 包中
